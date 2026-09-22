@@ -1,0 +1,477 @@
+# ☕ Java — Day 2
+
+## 📌 Topics Covered
+
+* `if-else`
+* Comparison operators: `>`, `<`, `>=`, `<=`
+* Logical operators: `&&`, `||`
+* Modulus operator `%`
+* Multiple conditions
+* 2-digit and 3-digit number checking
+* Leap year logic
+* Absolute value
+
+---
+
+## 1. Largest of Three Numbers
+
+### 🎯 Problem
+
+Find the largest among three numbers.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class LargestOfThree {
+    public static void main(String[] args) {
+
+        int a = 25;
+        int b = 40;
+        int c = 30;
+
+        if (a > b && a > c) {
+            System.out.println("Largest = " + a);
+        } else if (b > a && b > c) {
+            System.out.println("Largest = " + b);
+        } else {
+            System.out.println("Largest = " + c);
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Largest = 40
+```
+
+### 🔑 Important
+
+To check whether `a` is largest:
+
+```java
+a > b && a > c
+```
+
+`&&` means **both conditions must be true**.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 2. Smallest of Three Numbers
+
+### 🎯 Problem
+
+Find the smallest among three numbers.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SmallestOfThree {
+    public static void main(String[] args) {
+
+        int a = 25;
+        int b = 40;
+        int c = 15;
+
+        if (a < b && a < c) {
+            System.out.println("Smallest = " + a);
+        } else if (b < a && b < c) {
+            System.out.println("Smallest = " + b);
+        } else {
+            System.out.println("Smallest = " + c);
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Smallest = 15
+```
+
+### 🔑 Important
+
+For the smallest number, use `<` instead of `>`.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 3. Divisible by Both 5 and 10
+
+### 🎯 Problem
+
+Check whether a number is divisible by both 5 and 10.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class DivisibleBy5And10 {
+    public static void main(String[] args) {
+
+        int num = 50;
+
+        if (num % 5 == 0 && num % 10 == 0) {
+            System.out.println("Divisible by both 5 and 10");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Divisible by both 5 and 10
+```
+
+### 🔑 Important
+
+`%` gives the remainder.
+
+If:
+
+```java
+num % 5 == 0
+```
+
+the number is divisible by 5.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 4. Multiple of 3 or 7
+
+### 🎯 Problem
+
+Check whether a number is a multiple of 3 or 7.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class MultipleOf3Or7 {
+    public static void main(String[] args) {
+
+        int num = 21;
+
+        if (num % 3 == 0 || num % 7 == 0) {
+            System.out.println("Multiple of 3 or 7");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Multiple of 3 or 7
+```
+
+### 🔑 Important
+
+`||` means **OR**.
+
+Only one condition needs to be true.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 5. Check 3-Digit Number
+
+### 🎯 Problem
+
+Check whether a positive number has exactly 3 digits.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class ThreeDigitNumber {
+    public static void main(String[] args) {
+
+        int num = 456;
+
+        if (num >= 100 && num <= 999) {
+            System.out.println("3-digit number");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+3-digit number
+```
+
+### 🔑 Important
+
+A positive 3-digit number satisfies:
+
+```text
+100 ≤ num ≤ 999
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 6. Check 2-Digit Number
+
+### 🎯 Problem
+
+Check whether a positive number has exactly 2 digits.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class A2digitNumOrNot {
+    public static void main(String[] args) {
+
+        int num = 45;
+
+        if (num >= 10 && num <= 99) {
+            System.out.println("2-digit number");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+2-digit number
+```
+
+### 🔑 Important
+
+A positive 2-digit number satisfies:
+
+```text
+10 ≤ num ≤ 99
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 7. Divisible by Both 3 and 5
+
+### 🎯 Problem
+
+Check whether a number is divisible by both 3 and 5.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class DivisibleBy3and5 {
+    public static void main(String[] args) {
+
+        int num = 30;
+
+        if (num % 3 == 0 && num % 5 == 0) {
+            System.out.println("Divisible by both 3 and 5");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Divisible by both 3 and 5
+```
+
+### 🔑 Important
+
+Both conditions must be true:
+
+```java
+num % 3 == 0 && num % 5 == 0
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 8. Positive, Even and Greater Than 10
+
+### 🎯 Problem
+
+Check whether a number is positive, even, and greater than 10.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class CheckNumIsPosEvenGreaterThan10 {
+    public static void main(String[] args) {
+
+        int num = 24;
+
+        if (num > 0 && num % 2 == 0 && num > 10) {
+            System.out.println("Positive, Even and Greater than 10");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Positive, Even and Greater than 10
+```
+
+### 🔑 Important
+
+Multiple conditions can be connected using `&&`.
+
+All conditions must be true.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 9. Leap Year
+
+### 🎯 Problem
+
+Check whether a year is a leap year.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class LeapYearOrNot {
+    public static void main(String[] args) {
+
+        int year = 2024;
+
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            System.out.println("Leap year");
+        } else {
+            System.out.println("Not a Leap year");
+        }
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Leap year
+```
+
+### 🧠 Leap Year Rule
+
+A year is a leap year when:
+
+```text
+Divisible by 400
+OR
+Divisible by 4 AND NOT divisible by 100
+```
+
+Examples:
+
+```text
+2024 → Leap year
+2023 → Not a leap year
+1900 → Not a leap year
+2000 → Leap year
+```
+
+### ⭐ Interview Tip
+
+Don't simply check:
+
+```java
+year % 4 == 0
+```
+
+because `1900` is divisible by 4 but **is not** a leap year.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 10. Absolute Value Conversion
+
+### 🎯 Problem
+
+Find the absolute value of a number without using `Math.abs()`.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class AbsoluteValueConversion {
+    public static void main(String[] args) {
+
+        int num = -25;
+
+        if (num < 0) {
+            num = num * -1;
+        }
+
+        System.out.println("Absolute Value = " + num);
+    }
+}
+```
+
+### 🖥️ Output
+
+```text
+Absolute Value = 25
+```
+
+### 🔑 Important
+
+If the number is negative:
+
+```java
+num = num * -1;
+```
+
+Example:
+
+```text
+-25 × -1 = 25
+```
+
+Positive numbers remain unchanged.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 🧠 Day 2 — Key Concepts
+
+| Concept             | Example         |   |   |
+| ------------------- | --------------- | - | - |
+| Greater than        | `a > b`         |   |   |
+| Less than           | `a < b`         |   |   |
+| Greater/equal       | `a >= b`        |   |   |
+| Less/equal          | `a <= b`        |   |   |
+| AND                 | `&&`            |   |   |
+| OR                  | `               |   | ` |
+| Remainder           | `%`             |   |   |
+| Not equal           | `!=`            |   |   |
+| Multiple conditions | `&&` / `        |   | ` |
+| `if-else`           | Decision making |   |   |
+
+# 🎯 Day 2 Progress
+
+**Java Programs Completed: 10/10 ✅**
+
+### Skills practiced
+
+* Conditional statements
+* Comparison operators
+* Logical operators
+* `%` operator
+* Complex conditions
+* Number-property checking
+* Leap-year logic
+* Basic interview-style problem solving
