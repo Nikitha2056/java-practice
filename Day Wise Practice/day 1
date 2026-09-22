@@ -1,0 +1,1585 @@
+# 🚀 Java + DSA Basic Coding Practice — Day 1
+
+> **Goal:** Build strong coding fundamentals and problem-solving skills before moving to harder interview questions.
+
+---
+
+# ☕ Part 1 — Java Basics
+
+## 1️⃣ Print a Name
+
+### 📌 Problem
+
+Write a Java program to print a name.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class PrintAName {
+
+    public static void main(String[] args) {
+
+        String name = "Nikitha";
+
+        System.out.println("Name = " + name);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Name = Nikitha
+```
+
+### 🧠 Important Points
+
+* `String` stores text.
+* `System.out.println()` prints output.
+* `+` can be used to join strings and variables.
+* Java statements end with `;`.
+
+---
+
+# 2️⃣ Sum of Two Numbers
+
+### 📌 Problem
+
+Add two numbers.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SumOfNum {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 20;
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Sum = 30
+```
+
+### 🧠 Important Points
+
+```java
+int sum = a + b;
+```
+
+* `int` stores integer values.
+* `+` performs addition.
+* The result is stored in `sum`.
+
+---
+
+# 3️⃣ Even or Odd
+
+### 📌 Problem
+
+Check whether a number is even or odd.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class EvenOrOdd {
+
+    public static void main(String[] args) {
+
+        int num = 17;
+
+        if (num % 2 == 0) {
+            System.out.println("Num is Even");
+        } else {
+            System.out.println("Num is Odd");
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Num is Odd
+```
+
+### 🧠 Important Points
+
+The `%` operator gives the **remainder**.
+
+```text
+17 % 2 = 1 → Odd
+20 % 2 = 0 → Even
+```
+
+### ⭐ Remember
+
+```java
+num % 2 == 0
+```
+
+→ Even
+
+```java
+num % 2 != 0
+```
+
+→ Odd
+
+---
+
+# 4️⃣ Positive, Negative or Zero
+
+### 📌 Problem
+
+Determine whether a number is positive, negative, or zero.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class PNZ {
+
+    public static void main(String[] args) {
+
+        int a = -5;
+
+        if (a > 0) {
+            System.out.println("Positive");
+        } else if (a < 0) {
+            System.out.println("Negative");
+        } else {
+            System.out.println("Zero");
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Negative
+```
+
+### 🧠 Important Points
+
+```java
+a > 0
+```
+
+→ Positive
+
+```java
+a < 0
+```
+
+→ Negative
+
+Otherwise:
+
+```java
+a == 0
+```
+
+→ Zero
+
+### ⭐ Pattern
+
+```java
+if (condition1) {
+    
+} else if (condition2) {
+    
+} else {
+    
+}
+```
+
+---
+
+# 5️⃣ Largest of Two Numbers
+
+### 📌 Problem
+
+Find the larger of two numbers.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class LargestOfTwo {
+
+    public static void main(String[] args) {
+
+        int a = 25;
+        int b = 40;
+
+        if (a > b) {
+            System.out.println("a is Largest");
+        } else {
+            System.out.println("b is Largest");
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+b is Largest
+```
+
+### 🧠 Important Points
+
+Use comparison operators:
+
+```text
+>   Greater than
+<   Less than
+==  Equal to
+>=  Greater than or equal
+<=  Less than or equal
+!=  Not equal
+```
+
+---
+
+# 6️⃣ Print Numbers from 1 to 5
+
+### 📌 Problem
+
+Print numbers from 1 to 5.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class P1toN {
+
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+### 🧠 Important Points
+
+A `for` loop has three parts:
+
+```java
+for (initialization; condition; update)
+```
+
+Example:
+
+```java
+for (int i = 1; i <= 5; i++)
+```
+
+* `i = 1` → starting value
+* `i <= 5` → condition
+* `i++` → increase by 1
+
+---
+
+# 7️⃣ Sum from 1 to N
+
+### 📌 Problem
+
+Calculate:
+
+```text
+1 + 2 + 3 + 4 + 5
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class S1toN {
+
+    public static void main(String[] args) {
+
+        int sum = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            sum = sum + i;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Sum = 15
+```
+
+### 🧠 Dry Run
+
+```text
+sum = 0
+
+i = 1 → sum = 0 + 1 = 1
+i = 2 → sum = 1 + 2 = 3
+i = 3 → sum = 3 + 3 = 6
+i = 4 → sum = 6 + 4 = 10
+i = 5 → sum = 10 + 5 = 15
+```
+
+### ⭐ Important Pattern
+
+```java
+int sum = 0;
+
+for (...) {
+    sum = sum + value;
+}
+```
+
+This is called a **running sum** pattern.
+
+---
+
+# 8️⃣ Multiplication Table
+
+### 📌 Problem
+
+Print the multiplication table of 7 from 1 to 10.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class M7 {
+
+    public static void main(String[] args) {
+
+        int num = 7;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num * i);
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+```
+
+### 🧠 Important Points
+
+Keep `num` constant:
+
+```java
+int num = 7;
+```
+
+Calculate:
+
+```java
+num * i
+```
+
+Do **not** do:
+
+```java
+num = num * i;
+```
+
+because that changes `num` every iteration.
+
+### ⭐ `print()` vs `println()`
+
+```java
+System.out.print()
+```
+
+→ Same line
+
+```java
+System.out.println()
+```
+
+→ Next line
+
+To print:
+
+```text
+7 14 21 28 35
+```
+
+use:
+
+```java
+System.out.print(num * i + " ");
+```
+
+---
+
+# 9️⃣ Print Numbers from 1 to 10
+
+### 📌 Problem
+
+Print numbers from 1 to 10.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class P1toN {
+
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+### 🧠 Important Points
+
+The same `for` loop pattern can be changed easily:
+
+```java
+i = 1
+i <= 10
+i++
+```
+
+Later we'll replace `10` with user input `N`.
+
+---
+
+# 🔟 Print Even Numbers from 1 to 20
+
+### 📌 Problem
+
+Print all even numbers from 1 to 20.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class EvenNum {
+
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 20; i++) {
+
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
+
+### 🧠 Important Points
+
+Combine:
+
+```text
+for loop
++
+if condition
++
+modulus operator
+```
+
+This is a very common basic programming pattern.
+
+---
+
+# 🧠 Part 2 — DSA Basics
+
+# 1️⃣ Linear Search
+
+### 📌 Problem
+
+Search for `30` in:
+
+```java
+{10, 20, 30, 40, 50}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SearchArray {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        int search = 30;
+
+        boolean found = false;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] == search) {
+                found = true;
+            }
+        }
+
+        if (found) {
+            System.out.println("Element is found");
+        } else {
+            System.out.println("Element not found");
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Element is found
+```
+
+### 🧠 Important Concept
+
+This is called **Linear Search**.
+
+We check elements one by one:
+
+```text
+10 → ❌
+20 → ❌
+30 → ✅
+```
+
+### ⭐ Why `boolean found`?
+
+Initially:
+
+```java
+boolean found = false;
+```
+
+When we find the element:
+
+```java
+found = true;
+```
+
+After searching the complete array:
+
+```java
+if (found)
+```
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+### ⚠️ Important Lesson
+
+Don't print `"Element not found"` inside the loop.
+
+Why?
+
+Because an element might not match the **first few elements** but could exist later.
+
+---
+
+# 2️⃣ Find Largest Element
+
+### 📌 Problem
+
+Given:
+
+```java
+{10, 25, 7, 40, 15}
+```
+
+Find the largest element.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class LargestEle {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 25, 7, 40, 15};
+
+        int largest = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+
+        System.out.println("The Largest element = " + largest);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+The Largest element = 40
+```
+
+### 🧠 Dry Run
+
+```text
+largest = 10
+
+25 > 10 → largest = 25
+7 > 25  → No
+40 > 25 → largest = 40
+15 > 40 → No
+```
+
+Final:
+
+```text
+largest = 40
+```
+
+### ⭐ Important Pattern
+
+```java
+int largest = arr[0];
+
+for (...) {
+    if (arr[i] > largest) {
+        largest = arr[i];
+    }
+}
+```
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 3️⃣ Find Smallest Element
+
+### 📌 Problem
+
+Find the smallest element in:
+
+```java
+{10, 25, 7, 40, 15}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SmallestEle {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 25, 7, 40, 15};
+
+        int smallest = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] < smallest) {
+                smallest = arr[i];
+            }
+        }
+
+        System.out.println("The Smallest element = " + smallest);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+The Smallest element = 7
+```
+
+### 🧠 Dry Run
+
+```text
+smallest = 10
+
+25 < 10 → No
+7 < 10  → smallest = 7
+40 < 7  → No
+15 < 7  → No
+```
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 4️⃣ Count Even Numbers
+
+### 📌 Problem
+
+Given:
+
+```java
+{10, 15, 22, 7, 8, 13}
+```
+
+Count the even numbers.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class CountEvenNum {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 15, 22, 7, 8, 13};
+
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] % 2 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Count = " + count);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Count = 3
+```
+
+### 🧠 Dry Run
+
+```text
+10 → Even → count = 1
+15 → Odd
+22 → Even → count = 2
+7  → Odd
+8  → Even → count = 3
+13 → Odd
+```
+
+### ⭐ Important Pattern
+
+```java
+int count = 0;
+
+if (condition) {
+    count++;
+}
+```
+
+This pattern is extremely useful in coding problems.
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 5️⃣ Sum of Array Elements
+
+### 📌 Problem
+
+Find the sum of:
+
+```java
+{10, 20, 30, 40, 50}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SumOfArray {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Sum = 150
+```
+
+### 🧠 Dry Run
+
+```text
+sum = 0
+
+10 → 10
+20 → 30
+30 → 60
+40 → 100
+50 → 150
+```
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 6️⃣ Reverse an Array
+
+### 📌 Problem
+
+Print:
+
+```java
+{10, 20, 30, 40, 50}
+```
+
+in reverse order.
+
+### 💻 Code
+
+```java
+package p1;
+
+public class ReverseAnArray {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        System.out.print("Reverse Array = ");
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Reverse Array = 50 40 30 20 10
+```
+
+### 🧠 Array Indexes
+
+```text
+Value:  10   20   30   40   50
+Index:   0    1    2    3    4
+```
+
+For reverse:
+
+```text
+4 → 3 → 2 → 1 → 0
+```
+
+### ⭐ Important Pattern
+
+```java
+for (int i = arr.length - 1; i >= 0; i--)
+```
+
+This means:
+
+* Start at last index.
+* Continue while `i >= 0`.
+* Decrease `i` using `i--`.
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 7️⃣ Count Odd Numbers
+
+### 📌 Problem
+
+Count odd numbers in:
+
+```java
+{10, 15, 22, 7, 8, 13}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class CountOdd {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 15, 22, 7, 8, 13};
+
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] % 2 != 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Count = " + count);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Count = 3
+```
+
+### 🧠 Important Points
+
+Even:
+
+```java
+arr[i] % 2 == 0
+```
+
+Odd:
+
+```java
+arr[i] % 2 != 0
+```
+
+### ⚠️ Java is Case-Sensitive
+
+These are different:
+
+```java
+count
+Count
+```
+
+---
+
+# 8️⃣ Find Index of an Element
+
+### 📌 Problem
+
+Find the index of `30` in:
+
+```java
+{10, 20, 30, 40, 50}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class FindTheIndex {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] == 30) {
+                System.out.println("Index = " + i);
+            }
+        }
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Index = 2
+```
+
+### 🧠 Important Concept
+
+An array uses **zero-based indexing**.
+
+```text
+Index:  0    1    2    3    4
+Value: 10   20   30   40   50
+                  ↑
+                index 2
+```
+
+### ⭐ Remember
+
+```java
+arr[i]
+```
+
+means:
+
+> Give me the value stored at index `i`.
+
+While:
+
+```java
+i
+```
+
+represents the index.
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 9️⃣ Count Positive Numbers
+
+### 📌 Problem
+
+Count positive numbers in:
+
+```java
+{-5, 10, -2, 20, 0, 15}
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class CountPosNum {
+
+    public static void main(String[] args) {
+
+        int[] arr = {-5, 10, -2, 20, 0, 15};
+
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] > 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Count = " + count);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Count = 3
+```
+
+### 🧠 Important Points
+
+Positive:
+
+```java
+arr[i] > 0
+```
+
+Negative:
+
+```java
+arr[i] < 0
+```
+
+Zero:
+
+```java
+arr[i] == 0
+```
+
+Notice that **0 is not positive**.
+
+### ⏱️ Complexity
+
+```text
+Time:  O(n)
+Space: O(1)
+```
+
+---
+
+# 🔟 Second Largest Element
+
+### 📌 Problem
+
+Find the second-largest element without sorting.
+
+Array:
+
+```java
+{10, 25, 7, 40, 15}
+```
+
+Expected:
+
+```text
+25
+```
+
+### 💻 Code
+
+```java
+package p1;
+
+public class SecondLargest {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 25, 7, 40, 15};
+
+        int largest = arr[0];
+        int secondLargest = largest;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] > largest) {
+
+                secondLargest = largest;
+                largest = arr[i];
+            }
+        }
+
+        System.out.println("Second Largest = " + secondLargest);
+    }
+}
+```
+
+### 📤 Output
+
+```text
+Second Largest = 25
+```
+
+### 🧠 Important Concept
+
+When a **new largest** is found:
+
+```text
+Old largest → second largest
+New value   → largest
+```
+
+Example:
+
+```text
+largest = 25
+secondLargest = 10
+
+Find 40
+
+secondLargest = 25
+largest = 40
+```
+
+### ⭐ Important Order
+
+Correct:
+
+```java
+secondLargest = largest;
+largest = arr[i];
+```
+
+Not:
+
+```java
+largest = arr[i];
+secondLargest = arr[i];
+```
+
+because then both could become the same value.
+
+### ⚠️ Interview Note
+
+This basic version works for the simple example we practiced, but a production/interview-ready implementation should also handle edge cases such as:
+
+* Arrays with fewer than 2 elements
+* Duplicate largest values
+* Negative numbers
+* Whether "second largest" means distinct second largest
+
+We'll revisit this problem later with those cases.
+
+---
+
+# 🧠 MOST IMPORTANT PATTERNS LEARNED
+
+## Pattern 1 — Array Traversal
+
+```java
+for (int i = 0; i < arr.length; i++) {
+    // work with arr[i]
+}
+```
+
+You will use this **constantly** in DSA.
+
+---
+
+## Pattern 2 — Reverse Traversal
+
+```java
+for (int i = arr.length - 1; i >= 0; i--) {
+    // work with arr[i]
+}
+```
+
+Used for:
+
+* Reverse arrays
+* Reverse traversal
+* Backward searching
+* Some two-pointer problems
+
+---
+
+## Pattern 3 — Running Sum
+
+```java
+int sum = 0;
+
+for (...) {
+    sum = sum + value;
+}
+```
+
+Used for:
+
+* Array sum
+* Prefix-related problems
+* Running totals
+
+---
+
+## Pattern 4 — Counting
+
+```java
+int count = 0;
+
+if (condition) {
+    count++;
+}
+```
+
+Used for:
+
+* Count even numbers
+* Count odd numbers
+* Count positive numbers
+* Count occurrences
+* Many interview problems
+
+---
+
+## Pattern 5 — Find Maximum
+
+```java
+int largest = arr[0];
+
+for (int i = 0; i < arr.length; i++) {
+
+    if (arr[i] > largest) {
+        largest = arr[i];
+    }
+}
+```
+
+---
+
+## Pattern 6 — Find Minimum
+
+```java
+int smallest = arr[0];
+
+for (int i = 0; i < arr.length; i++) {
+
+    if (arr[i] < smallest) {
+        smallest = arr[i];
+    }
+}
+```
+
+---
+
+## Pattern 7 — Search
+
+```java
+boolean found = false;
+
+for (int i = 0; i < arr.length; i++) {
+
+    if (arr[i] == search) {
+        found = true;
+    }
+}
+
+if (found) {
+    // Found
+} else {
+    // Not Found
+}
+```
+
+---
+
+# ⭐ Java Rules to Remember
+
+### 1. Java is case-sensitive
+
+```java
+count
+Count
+```
+
+are different variables.
+
+---
+
+### 2. `%` gives remainder
+
+```text
+10 % 2 = 0
+11 % 2 = 1
+```
+
+---
+
+### 3. `i++`
+
+Means:
+
+```text
+i = i + 1
+```
+
+---
+
+### 4. `i--`
+
+Means:
+
+```text
+i = i - 1
+```
+
+---
+
+### 5. Array indexing starts from 0
+
+For an array of length `n`:
+
+```text
+First index = 0
+Last index = n - 1
+```
+
+Therefore:
+
+```java
+arr.length - 1
+```
+
+is the last index.
+
+---
+
+### 6. `print()` vs `println()`
+
+```java
+System.out.print()
+```
+
+→ same line
+
+```java
+System.out.println()
+```
+
+→ next line
+
+---
+
+# 📊 Day 1 Progress
+
+| Section     | Questions | Status           |
+| ----------- | --------: | ---------------- |
+| Java Basics |        10 | ✅ Completed      |
+| DSA Basics  |        10 | ✅ Completed      |
+| Total       |    **20** | 🏆 **Completed** |
+
+### 🎯 Day 1 DSA Concepts
+
+* ✅ Array traversal
+* ✅ Linear search
+* ✅ Array indexing
+* ✅ Maximum element
+* ✅ Minimum element
+* ✅ Sum of array
+* ✅ Counting
+* ✅ Even/Odd checking
+* ✅ Reverse traversal
+* ✅ Second-largest concept
+
+---
+
+# 🚀 Next Stage
+
+We will **not suddenly jump to hard LeetCode problems**.
+
+Our progression will be:
+
+```text
+Basic Java
+   ↓
+Basic DSA          ← YOU ARE HERE
+   ↓
+More Array Problems
+   ↓
+String Problems
+   ↓
+Searching
+   ↓
+Sorting
+   ↓
+Easy Interview Problems
+   ↓
+LeetCode Easy
+   ↓
+Medium Problems
+   ↓
+MNC Interview Preparation
+```
+
+**Goal:** Don't just memorize solutions. Learn to **think and build the solution yourself.** 💪
